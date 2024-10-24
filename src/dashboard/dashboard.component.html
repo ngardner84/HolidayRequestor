@@ -1,43 +1,58 @@
-<mat-card class="header">
-    <mat-card-header>
+<div class="container">
+
+    <mat-card class="header">
+      <mat-card-header>
         <mat-card-title>
-        <h4>Dashboard</h4>
+          <mat-icon>dashboard</mat-icon>
+          <h4>Dashboard</h4>
         </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
+      </mat-card-header>
+      <mat-card-content>
         <p>Public Holiday Finder</p>
-    </mat-card-content>
-</mat-card>
-
-<mat-card class="mainContent"> 
-    <div class="holidayForm"> 
-        <form [formGroup]="form" (ngSubmit)="getHolidays()">
+      </mat-card-content>
+    </mat-card>
+  
+    <mat-card class="mainContent"> 
+      <div class="holidayForm">
+        <form [formGroup]="form" (ngSubmit)="getHolidays()" class="form">
+          <div class="formFields">
             <mat-form-field class="formField">
-                <input matInput placeholder="Enter country code" formControlName="countryCode">
+              <input matInput placeholder="Enter country code" formControlName="countryCode">
             </mat-form-field>
-            <mat-form-field>
-                <input matInput placeholder="Enter year" formControlName="year">
+            <mat-form-field class="formField">
+              <input matInput placeholder="Enter year" formControlName="year">
             </mat-form-field>
-            <button mat-raised-button color="primary" type="submit">Get Holidays</button>
+          </div>
+          <button mat-raised-button color="primary" type="submit">Get Holidays</button>
         </form>
-    </div>
-
-    <div class="holidayTable">
+      </div>
+  
+      <div class="holidayTable">
         <table mat-table [dataSource]="holidays" class="mat-elevation-z8">
-            <ng-container matColumnDef="date">
-                <th mat-header-cell *matHeaderCellDef>Date</th>
-                <td mat-cell *matCellDef="let element">{{element.date}}</td>
-            </ng-container>
-            <ng-container matColumnDef="name">
-                <th mat-header-cell *matHeaderCellDef>Name</th>
-                <td mat-cell *matCellDef="let element">{{element.name}}</td>
-            </ng-container>
-            <ng-container matColumnDef="countryCode">
-                <th mat-header-cell *matHeaderCellDef>Country Code</th>
-                <td mat-cell *matCellDef="let element">{{element.countryCode}}</td>
-            </ng-container>
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          <!-- Date Column -->
+          <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef>Date</th>
+            <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+          </ng-container>
+  
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>Name</th>
+            <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+          </ng-container>
+  
+          <!-- Country Code Column -->
+          <ng-container matColumnDef="countryCode">
+            <th mat-header-cell *matHeaderCellDef>Country Code</th>
+            <td mat-cell *matCellDef="let element">{{ element.countryCode }}</td>
+          </ng-container>
+  
+          <!-- Header and Row Declarations -->
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
-    </div>
-</mat-card>
+      </div>
+    </mat-card>
+  
+  </div>
+  
