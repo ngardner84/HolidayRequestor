@@ -1,0 +1,38 @@
+.holidayTable {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 7%;
+    
+}
+
+.holidayForm {
+    width: 90%;
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.mainContent {
+    justify-content: center;
+    display: flex;
+    margin:auto;
+    margin-bottom: 50px;
+}
+
+.formField {
+    margin: 10px;
+}
+
+.header {
+    justify-content: center;
+    display: flex;
+    background: lightgrey;
+
+}
