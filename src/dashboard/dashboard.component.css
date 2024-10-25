@@ -15,6 +15,11 @@
   .header h4 {
     margin: 0;
   }
+
+  .headerTitle {
+    font-size: 24px;
+    font-weight: bold;
+  }
   
   mat-card-title {
     display: flex;

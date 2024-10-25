@@ -35,6 +35,7 @@ export class DashboardComponent {
   year: string = '2021';
   countryCode: string = 'US';
   displayedColumns: string[] = ['date', 'name', 'countryCode'];
+  pageTitle = "Public Holiday Finder";
 
 
   form: FormGroup = new FormGroup({

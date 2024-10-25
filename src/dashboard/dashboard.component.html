@@ -7,8 +7,8 @@
           <h4>Dashboard</h4>
         </mat-card-title>
       </mat-card-header>
-      <mat-card-content>
-        <p>Public Holiday Finder</p>
+      <mat-card-content class="headerTitle">
+        <p>{{pageTitle}}</p>
       </mat-card-content>
     </mat-card>
   
@@ -17,9 +17,11 @@
         <form [formGroup]="form" (ngSubmit)="getHolidays()" class="form">
           <div class="formFields">
             <mat-form-field class="formField">
+              <mat-label>Country Code</mat-label>
               <input matInput placeholder="Enter country code" formControlName="countryCode">
             </mat-form-field>
             <mat-form-field class="formField">
+              <mat-label>Year</mat-label>
               <input matInput placeholder="Enter year" formControlName="year">
             </mat-form-field>
           </div>
