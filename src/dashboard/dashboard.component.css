@@ -64,6 +64,14 @@
     overflow-x: auto;
   }
   
+  /* Make the table zebra striped */
+  .headerRow {
+    background-color: #f2f2f2;
+  }
+
+  .holidayTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
   table {
     width: 100%;
     border-collapse: collapse;

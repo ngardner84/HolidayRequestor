@@ -10,6 +10,7 @@ import { MatOptionModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-dashboard',
@@ -24,7 +25,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatOptionModule,
     MatButtonModule,
     MatTableModule,
-    MatIconModule
+    MatIconModule,
+    MatCheckboxModule
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
@@ -34,7 +36,7 @@ export class DashboardComponent {
   holidays: any;
   year: string = '2021';
   countryCode: string = 'US';
-  displayedColumns: string[] = ['date', 'name', 'countryCode'];
+  displayedColumns: string[] = ['date', 'localName', 'name', 'countryCode', 'global'];
   pageTitle = "Public Holiday Finder";
 
 
